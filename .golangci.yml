@@ -88,10 +88,10 @@ linters:
     - gocyclo
     - gofmt
     - goimports
-    - gomnd
+#    - gomnd
     - goprintffuncname
-    - gosec
-    - gosimple
+#    - gosec
+#    - gosimple
     - govet
     - ineffassign
     - lll
