@@ -21,8 +21,8 @@ func main() {
 	}
 
 	app := &cli.App{
-		Name:  "boom",
-		Usage: "make an explosive entrance",
+		Name:  "husky-go",
+		Usage: "husky git hooks manager in go",
 		Action: func(c *cli.Context) error {
 			fmt.Println("boom! I say!") //nolint
 

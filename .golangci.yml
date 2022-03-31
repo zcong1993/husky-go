@@ -47,7 +47,7 @@ linters-settings:
   gocyclo:
     min-complexity: 15
   # goimports:
-  #   local-prefixes: github.com/zcong1993/template-go-cli
+  #   local-prefixes: github.com/zcong1993/husky-go
   gomnd:
     # TODO(ldez) must be rewritten after the v1.44.0 release.
     settings:

@@ -8,7 +8,7 @@ before:
     - go generate ./...
 builds:
   - main: main.go
-    binary: template-go-cli
+    binary: husky-go
     ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{ .CommitDate }} -X main.builtBy=goreleaser
     env:
       - CGO_ENABLED=0
@@ -33,12 +33,13 @@ changelog:
     exclude:
       - '^docs:'
       - '^test:'
-# brews:
-#   - tap:
-#       owner: zcong1993
-#       name: homebrew-tap
-#     folder: Formula
-#     homepage: https://github.com/zcong1993/template-go-cli
-#     description: xxx
-#     test: |
-#       system "#{bin}/template-go-cli -v"
+
+brews:
+   - tap:
+       owner: zcong1993
+       name: homebrew-tap
+     folder: Formula
+     homepage: https://github.com/zcong1993/husky-go
+     description: husky git hooks manager in go
+     test: |
+       system "#{bin}/husky-go -v"

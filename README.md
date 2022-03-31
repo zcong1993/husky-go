@@ -1,9 +1,9 @@
-# template-go-cli
+# husky-go
 <!--
-[![Go Report Card](https://goreportcard.com/badge/github.com/zcong1993/template-go-cli)](https://goreportcard.com/report/github.com/zcong1993/template-go-cli)
+[![Go Report Card](https://goreportcard.com/badge/github.com/zcong1993/husky-go)](https://goreportcard.com/report/github.com/zcong1993/husky-go)
 -->
 
-> my go project
+> husky git hooks manager in go
 
 ## License
 
