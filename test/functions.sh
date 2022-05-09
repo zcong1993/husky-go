@@ -4,7 +4,7 @@ set -eu
 HUSKY_GO="/tmp/husky-go"
 
 setup() {
-  name="$(basename $0)"
+  name="$(basename -- $0)"
   testDir="/tmp/husky-test-$name"
   echo
   echo "-------------------"

@@ -84,6 +84,11 @@ func main() {
 }
 
 func install(ctx *cli.Context) error {
+	if os.Getenv("HUSKY") == "0" {
+		fmt.Println("HUSKY env variable is set to 0, skipping install")
+		return nil
+	}
+
 	dir := ctx.Args().First()
 	if dir == "" {
 		dir = defaultDir
@@ -99,7 +104,8 @@ func install(ctx *cli.Context) error {
 		return err
 	}
 
-	url := "https://git.io/Jc3F9"
+	// Custom dir help
+	url := "https://typicode.github.io/husky/#/?id=custom-directory"
 
 	// 2. Ensure that we're not trying to install outside of cwd
 	cwd := mustCwd()
@@ -157,7 +163,7 @@ func set(file, cmd string) error {
 	}
 
 	err := os.WriteFile(file, []byte(fmt.Sprintf(`#!/usr/bin/env sh
-. "$(dirname "$0")/_/husky.sh"
+. "$(dirname -- "$0")/_/husky.sh"
 
 %s
 `, cmd)), 0o0755)
